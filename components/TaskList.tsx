@@ -1,5 +1,4 @@
-import React from "react";
-import { StyleSheet, View, TextInput, Button, FlatList } from "react-native";
+import { StyleSheet, View, FlatList } from "react-native";
 import TaskItem from "./TaskItem";
 
 type Props = {

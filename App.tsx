@@ -1,16 +1,6 @@
 import { useState } from "react";
-import { StatusBar } from "expo-status-bar";
-import {
-  StyleSheet,
-  Text,
-  View,
-  ScrollView,
-  Button,
-  TextInput,
-  FlatList,
-} from "react-native";
-
-import { TaskItem, TaskInput, TaskList } from "./components";
+import { StyleSheet, View } from "react-native";
+import { TaskInput, TaskList } from "./components";
 
 export default function App() {
   const [taskItems, setTaskItems] = useState<{ text: string; key: string }[]>(
@@ -19,8 +9,8 @@ export default function App() {
 
   const addTaskHandler = (task: string) => {
     setTaskItems((prevTaskItems) => [
-      ...prevTaskItems,
       { text: task, key: Math.random().toString() },
+      ...prevTaskItems,
     ]);
   };
 
